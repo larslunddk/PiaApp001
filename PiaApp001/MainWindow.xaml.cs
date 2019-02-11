@@ -27,12 +27,14 @@ namespace PiaApp001
 
         private void btButton1_Click(object sender, RoutedEventArgs e)
         {
-
+            ExcelFunctions excelFunctions = new ExcelFunctions();
+            excelFunctions.CreateExcel300Udd(@"c:\temp\TEC_Uddannelser.xlsx", @"c:\temp\TEC_300udd");
         }
 
         private void btButton2_Click(object sender, RoutedEventArgs e)
         {
-
+            ExcelFunctions excelFunctions = new ExcelFunctions();
+            excelFunctions.CreateExcel300Navne(@"c:\temp\TEC_Uddannelser.xlsx", @"c:\temp\TEC_300udd");
         }
 
         private void btButton3_Click(object sender, RoutedEventArgs e)
