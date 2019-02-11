@@ -93,5 +93,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AlfaPeopleLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TEC_Logo.jpg" />
+    <Resource Include="Resources\TEC_PIA_logo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

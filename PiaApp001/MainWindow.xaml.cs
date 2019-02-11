@@ -24,5 +24,20 @@ namespace PiaApp001
         {
             InitializeComponent();
         }
+
+        private void btButton1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btButton2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btButton3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

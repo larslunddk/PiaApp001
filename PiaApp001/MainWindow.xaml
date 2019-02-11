@@ -5,8 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PiaApp001"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Pias application til TEC" Height="450" Width="800">
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" x:Name="Logo" Source="Resources\TEC_Logo.jpg" Margin="2,2,2,2"/>
+            <TextBlock Grid.Column="0" Text="Misc. office functions demo" FontSize="20" FontWeight="Bold"/>
+        </Grid>
+        <!-- <Image x:Name="Logo" Source="Resources\AlfaPeopleLogo.jpg" Margin="220,10,10,10"/> -->
+        <!--<TextBlock Text=" " FontSize="30" Height="14"/>-->
+        <!--<TextBlock Text="GDPR Application" FontSize="20" FontWeight="Bold"/>-->
+        <TextBlock Text=" " FontSize="20"/>
+        <TextBlock Text="Menu" FontSize="18"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Excel: Opret Excel med 300 uddannelser" Margin="5,5,5,5" TextAlignment="Right" TextWrapping="Wrap"/>
+            <Button x:Name="btButton1" Grid.Column="1" Grid.Row="0" Content="Execute" FontSize="20" Margin="5,5,5,5" Click="btButton1_Click"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="1" Text="Excel: Opret Excel med 300 Navne" Margin="5,5,5,5" TextAlignment="Right" TextWrapping="Wrap"/>
+            <Button x:Name="btButton2" Grid.Column="1" Grid.Row="1" Content="Execute" FontSize="20" Margin="5,5,5,5" Click="btButton2_Click"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="2" Text="Word: New document with Std.text" Margin="5,5,5,5" TextAlignment="Right" TextWrapping="Wrap"/>
+            <Button x:Name="btButton3" Grid.Column="1" Grid.Row="2" Content="Execute" FontSize="20" Margin="5,5,5,5" Click="btButton3_Click"/>
+        </Grid>
+        <TextBlock Text=" " FontSize="30"/>
+        <StackPanel Margin="5 0 0 0">
+            <TextBlock FontWeight="Bold" Text="output"/>
+            <TextBox x:Name="tbOutputArea"/>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--<Button x:Name="btCreateDemo" Grid.Column="1" Content="**CreateDemo**" FontSize="12" Margin="5,5,5,5" Click="btCreateDemo_Click"/>-->
+        </Grid>
+        <Image Grid.Column="1" x:Name="Pialogo" Source="Resources\TEC_PIA_logo.jpg" Margin="2,2,696.286,2" Height="88"/>
+
+    </StackPanel>
 </Window>
