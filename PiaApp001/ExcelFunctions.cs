@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -54,8 +55,9 @@ namespace PiaApp001
             int lastRow = MySheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell).Row;
             List<string> Udd = new List<string> { };
 
-            MyBookOut = MyApp.Workbooks.Open(Outpath);
-            MySheetOut = (Excel.Worksheet)MyBook.Sheets[1]; // Explicit cast is not required here
+            MyBookOut = MyApp.Workbooks.Add();
+            MyBookOut.SaveAs(Outpath);
+            MySheetOut = (Excel.Worksheet)MyBookOut.Sheets[1]; // Explicit cast is not required here
 
 
             for (int index = 2; index <= lastRow; index++)
@@ -67,9 +69,18 @@ namespace PiaApp001
                 Udd.Add("TEC-udd:"+ UddNavn);
 
 
-                MyRange = MySheet.Cells[index, 1].value("TEC-udd: "+UddNavn);
+                //MyRange = 
+                MySheetOut.Cells[index, 1].value("TEC-udd: "+UddNavn);
             }
-            MyBook.Save();
+            MyBookOut.Save();
+            MyApp.Quit();
+            Marshal.ReleaseComObject(MySheetOut);
+            Marshal.ReleaseComObject(MySheet);
+            Marshal.ReleaseComObject(MyBook);
+            Marshal.ReleaseComObject(MyBookOut);
+            Marshal.ReleaseComObject(MyApp);
+
+
         }
         public void CreateExcel300Navne(string Inpath, string Outpath)
         {
